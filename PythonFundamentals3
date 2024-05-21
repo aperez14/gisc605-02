@@ -1,0 +1,28 @@
+#Lab 3 Python Fundamentals
+
+def myFunction():
+    for x in range(13, 1000, 13):
+        print(x)
+
+if __name__ == '__main__':
+    myFunction()
+
+def findDuplicates(myList):
+    myListNoDuplicates = set(myList)
+    myListSortedNoDups = list(myListNoDuplicates)
+    myListSortedNoDups.sort()
+    print("The list without duplicates: ", myListNoDuplicates)
+    print("The list sorted without duplicates: ", myListSortedNoDups)
+    if myList != myListNoDuplicates:
+        print("Returning True")
+        return True
+    else:
+        return False
+
+if __name__ == '__main__':
+    myList = [2, 8, 64, 16, 32, 4, 16, 8]
+    returnValue = findDuplicates(myList)
+    if not returnValue:
+        print("The list provided does not contain duplicate values")
+    else:
+        print("The list provided contains duplicate values.")
